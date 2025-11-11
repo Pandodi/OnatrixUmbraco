@@ -1,0 +1,44 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using OnatrixUmbraco.ViewModels
+@{
+	var content = (ContentModels.CallbackSection)Model.Content;
+	var settings = Model.Settings as ContentModels.CallbackSettings;
+
+	var formViewModel = new CallbackFormViewModel
+			{
+				Options = settings?.CallbackRequestOptions ?? []
+			};
+
+}
+<section>
+	<div>
+		<div>
+			<div>
+				@Html.Raw(content.CallbackSectionBody)
+			</div>
+		</div>
+
+		<div>
+			<div>
+				<p>@content.CallbackSectionFormTitle</p>
+			</div>
+			<p>@content.CallbackSectionFormDescription</p>
+
+			<partial name="Partials/Forms/_CallbackForm" model="formViewModel" />
+
+			@if (TempData["FormSuccess"] != null)
+			{
+				<div>
+					@TempData["FormSuccess"]
+				</div>
+			}
+			else if (TempData["FormError"] != null)
+			{
+				<div>
+					@TempData["FormError"]
+				</div>
+			}
+		</div>
+	</div>
+</section>
