@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.SuccessStorySection)Model.Content;
+	var successStoryList = content.SuccessStoryList;
+}
+
+<section>
+	<div class="story-background-image">
+		@if (content.SuccessStoryBackgroundImage != null)
+		{
+			<img src="@content.SuccessStoryBackgroundImage.Url()" />
+		}
+	</div>
+
+	<div class="story-team-image">
+		@if (content.SuccessStoryTeamPhoto != null)
+		{
+			<img src="@content.SuccessStoryTeamPhoto.Url()" />
+		}
+	</div>
+
+	<div class="trust-story-container">
+		<p>@content.SuccessStoryTitle</p>
+		<h2>@content.SuccessStorySubheading</h2>
+		<div>
+			@Html.GetBlockListHtml(content.SuccessStoryList)
+		</div>
+	</div>
+</section>
