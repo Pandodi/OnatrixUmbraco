@@ -71,7 +71,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.4+0d2393d")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("trustStoryLink")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> TrustStoryLink => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(_publishedValueFallback, "trustStoryLink");
+		public virtual global::Umbraco.Cms.Core.Models.Link TrustStoryLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "trustStoryLink");
 
 		///<summary>
 		/// Team Photo

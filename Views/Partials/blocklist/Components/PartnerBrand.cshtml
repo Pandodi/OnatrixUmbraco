@@ -1,12 +1,11 @@
-﻿﻿
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	var content = (ContentModels.PartnerBrand)Model.Content;
 
 }
 
-<div>
+<div class="partner-brand-logo">
 	@if (content.PartnerBrandLogo != null)
 	{
 		<img src="@content.PartnerBrandLogo.Url()" alt="@content.PartnerBrandLogo" />

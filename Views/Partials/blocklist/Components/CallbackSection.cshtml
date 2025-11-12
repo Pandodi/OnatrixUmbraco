@@ -11,19 +11,17 @@
 			};
 
 }
-<section>
-	<div>
-		<div>
-			<div>
-				@Html.Raw(content.CallbackSectionBody)
-			</div>
+<section class="callback-section">
+	<div class="callback-container">
+		<div class="callback-content">
+			@Html.Raw(content.CallbackSectionBody)
 		</div>
 
-		<div>
-			<div>
+		<div class="callback-form-container">
+			<div class="callback-form-title">
 				<p>@content.CallbackSectionFormTitle</p>
 			</div>
-			<p>@content.CallbackSectionFormDescription</p>
+			<p class="callback-form-description">@content.CallbackSectionFormDescription</p>
 
 			<partial name="Partials/Forms/_CallbackForm" model="formViewModel" />
 

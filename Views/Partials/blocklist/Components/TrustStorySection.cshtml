@@ -4,7 +4,7 @@
 	var content = (ContentModels.TrustStorySection)Model.Content;
 }
 
-<section>
+<section class="trust-story-section">
 	<div class="story-background-image">
 		@if (content.TrustStoryBackgroundImage != null)
 		{
@@ -21,10 +21,10 @@
 
 	<div class="trust-story-container">
 		<h2>@Html.Raw(content.TrustStoryTitle)</h2>
-		<div>@Html.Raw(content.TrustStoryBody)</div>
+		<div class="trust-story-body">@Html.Raw(content.TrustStoryBody)</div>
 		@if (content.TrustStoryLink != null)
 		{
-			<a href="@content.TrustStoryLink">@content.TrustStoryLink</a>
+			<a href="@content.TrustStoryLink.Url">@content.TrustStoryLink.Name</a>
 		}
 	</div>
 </section>

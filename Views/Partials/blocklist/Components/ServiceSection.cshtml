@@ -10,17 +10,17 @@
 
 
 
-<section>
-	<div>
-		<div>
+<section class="services-section">
+	<div class="services-container">
+		<div class="services-content">
 			@if (settings?.ShowServiceLabel == true)
 			{
 				<h2>@content.ServiceLabel</h2>
 			}
-			<div>@Html.Raw(content.ServiceTitle)</div>
+			<div class="services-rte">@Html.Raw(content.ServiceTitle)</div>
 		</div>
 
-		<div>
+		<div class="service-card-list">
 			@Html.GetBlockListHtml(content.ServiceCardList)
 		</div>
 	</div>
