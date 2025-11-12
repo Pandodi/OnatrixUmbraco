@@ -3,29 +3,25 @@
 @using (Html.BeginUmbracoForm("HandleCallbackForm", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "callbackForm" }))
 
 {
-	<div>
+	<div class="callback-form-content">
 		<div>
-			<label asp-for="Name"></label>
-			<input asp-for="Name" type="text" placeholder="@Html.DisplayNameFor(x => x.Name)" />
+			<input asp-for="Name" type="text" placeholder="@Html.DisplayNameFor(x => x.Name)" class="form-input"/>
 			<span asp-validation-for="Name"></span>
 		</div>
 
 		<div>
-			<label asp-for="Email"></label>
-			<input asp-for="Email" type="text" placeholder="@Html.DisplayNameFor(x => x.Email)" />
+			<input asp-for="Email" type="text" placeholder="@Html.DisplayNameFor(x => x.Email)" class="form-input" />
 			<span asp-validation-for="Email"></span>
 		</div>
 
 		<div>
-			<label asp-for="Phone"></label>
-			<input asp-for="Phone" type="text" placeholder="@Html.DisplayNameFor(x => x.Phone)" />
+			<input asp-for="Phone" type="text" placeholder="@Html.DisplayNameFor(x => x.Phone)" class="form-input" />
 			<span asp-validation-for="Phone"></span>
 		</div>
 
 		<div>
-			<label asp-for="SelectedOption"></label>
 			<div>
-				<select asp-for="SelectedOption">
+				<select asp-for="SelectedOption" class="form-input">
 					<option value="" disabled hidden selected>Please select an option</option>
 					@foreach (var option in Model.Options)
 					{
@@ -33,15 +29,18 @@
 					}
 				</select>
 
+				@*
 				<span>
-					@*Create caret here*@
+					Create caret here
 				</span>
+				*@
+
 			</div>
 		</div>
 		<span asp-validation-for="SelectedOption"></span>
 
 		<div>
-			<button type="submit">Submit</button>
+			<button class="form-button" type="submit">Submit</button>
 		</div>
 	</div>
 }

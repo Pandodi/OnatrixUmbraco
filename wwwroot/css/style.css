@@ -1,1 +1,445 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --font: "Poppins", sans-serif;
+    --clr-neutral: #ffffff;
+    --clr-white: #F2EDDC;
+    --clr-white-100: #F7F7F7;
+    --clr-dark: #0E0E0E;
+    --clr-primary: #4F5955;
+    --clr-main-light: #686966;
+    --clr-accent: #F2EDDC;
+    --clr-secondary: #D9C3A9;
+    --clr-gray-400: #4B5264;
+    --clr-body-text: #535656;
+    --clr-body-text-100: #999999;
+    --clr-notel: #9C9EA6;
+    --clr-border-gray: #EAEAEA;
+    --clr-border-400: #C7C8C9;
+    --clr-form-border: #EBEBEB;
+}
+
+body {
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography -- Umbraco RTE Stylesheet */
+
+.text-rte-xl{
+    font-size: 70px;
+}
+
+.text-rte-lg {
+    font-size: 40px;
+}
+
+.text-rte-md {
+    font-size: 20px;
+}
+
+.text-rte-sm {
+    font-size: 16px;
+}
+
+.text-rte-xs {
+    font-size: 14px;
+}
+
+
+.font-light {
+    font-weight: 300;
+}
+
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-primary {
+    color: #4F5955;
+}
+
+.text-secondary {
+    color: #D9C3A9;
+}
+
+.text-body-text {
+    color: #535656;
+}
+
+.text-body-text-100 {
+    color: #999999;
+}
+
+/* Hero Section */
+
+
+.hero-section{
+    position: relative;
+}
+.hero-background-image {
+    position: absolute;
+    width: 100%;
+    height: 552px;
+    background-size: cover;
+    background-position: center;
+    z-index: -99;
+}
+
+.hero-container {
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+.hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+    .hero-content h1 {
+        margin: 0;
+        padding: 0;
+        padding-top: 7rem;
+        color: var(--clr-primary);
+        font-size: 70px;
+        line-height: 1.1;
+    }
+
+    .hero-rte p{
+        margin: 0;
+    }
+
+    .hero-content a {
+        background-color: var(--clr-primary);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        align-self: flex-start;
+        color: var(--clr-white);
+        font-weight: bold;
+    }
+
+/* Callback Section */
+
+.callback-section {
+    padding-top: 12rem; 
+    padding-bottom: 7rem;
+}
+
+.callback-container {
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.callback-container p {
+    margin: 0rem;
+    line-height: 1.125;
+}
+
+.callback-content {
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.callback-form-container {
+    background-color: var(--clr-neutral);
+    width: 470px;
+    height: 572px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    z-index: 101;
+    position: absolute;
+    right: 19vw;
+    top: 625px;
+}
+
+.callback-form-title{
+    background-color: var(--clr-primary);
+}
+
+    .callback-form-title p {
+        color: var(--clr-white);
+        padding: 2rem;
+        font-size: 1.875rem;
+        font-weight: bold;
+    }
+
+.callback-form-description {
+    padding: 2rem;
+    font-style: italic;
+    color: var(--clr-body-text);
+    font-size: 13px;
+}
+
+.callback-form-content {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-input {
+    padding: 1rem;
+    font-style: italic;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--clr-form-border);
+    width: 100%
+}
+
+.form-button {
+    font-weight: bold;
+    font-size: 16px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--clr-form-border);
+    border-radius: 4px;
+    user-select: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    background-color: var(--clr-accent);
+    color: var(--clr-primary);
+    margin-bottom: 2rem;
+}
+
+/* Our Services Section */
+.services-section{
+    padding-top: 2.5rem;
+    background-color: var(--clr-white-100);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7rem;
+}
+.services-container {
+    max-width: 60vw;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.services-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-content h2{
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--clr-secondary);
+}
+
+.services-rte {
+    line-height: 0.5;
+}
+
+.service-card-list .umb-block-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.service-card-container{
+    background-color: var(--clr-neutral);
+    border-radius: 4px;
+}
+
+.service-card-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-content h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--clr-primary);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.service-card-content p {
+    font-size: 14px;
+    color: var(--clr-body-text);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Trust Story Section */
+.trust-story-section {
+    position: relative;
+    padding-top: 2.5rem;
+    background-color: var(--clr-neutral);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 586px;
+}
+
+.trust-story-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+
+.trust-story-container h2{
+    line-height: 0.5;
+    margin: 0;
+}
+
+.trust-story-container a {
+    background-color: var(--clr-primary);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    color: var(--clr-white);
+    font-weight: bold;
+}
+
+.story-background-image {
+    position: absolute;
+    padding-top: 6.5rem;
+}
+
+.story-team-image {
+    position: absolute;
+    padding-top: 27rem;
+}
+
+.trust-story-body{
+    max-width: 70%;
+    margin: 0;
+}
+
+/* Success Story Section */
+.success-story-section {
+    position: relative;
+    background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+    height: 838px;
+    margin-bottom: 17.5rem;
+}
+
+.success-story-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    padding-top: 7rem;
+}
+
+.success-story-container p{
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--clr-secondary);
+    margin: 0;
+}
+
+.success-story-container h2 {
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--clr-neutral);
+    margin: 0;
+}
+
+.success-story-team-image {
+    position: absolute;
+    top: 30rem;
+}
+
+.success-story-background-image {
+    position: absolute;
+    top: 8rem;
+    z-index: 99;
+}
+
+.success-story-list .umb-block-list{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    gap: 2em;
+}
+
+.success-story-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23em;
+    text-align: center;
+    padding: 1em;
+}
+
+#success-story-title {
+    font-size: 100px;
+    margin: 0;
+}
+
+#success-story-body{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--clr-neutral)
+}
+
+/* Brands Section */
+.partner-brands-section {
+    background-color: var(--clr-neutral);
+    align-items: center;
+    padding-bottom: 5rem;
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.partner-brands-list .umb-block-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
