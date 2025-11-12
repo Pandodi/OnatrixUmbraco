@@ -443,3 +443,53 @@ body {
     padding-right: 1rem;
 }
 
+/* Page Header */
+
+.page-header-section {
+    background-image: url('/images/Page_Header-bg.svg');
+    background-size: cover;
+    background-position: center;
+    height: 245px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.page-header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-header-container h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--clr-primary);
+    margin: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    align-items: center;
+    list-style-type: none;
+    justify-content: center;
+    place-self: center;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    font-size: 14px;
+}
+
+.active{
+    color: var(--clr-secondary);
+}
+
+.breadcrumb li a{
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+
+
