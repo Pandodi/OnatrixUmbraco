@@ -204,6 +204,42 @@
           "appearance": { "style": "background-color:#999999; color:#FFF; padding:5px;" }
         }
       ]
+    },
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.Padding",
+      "name": "Onatrix Padding",
+      "meta": {
+        "alias": "onatrixPadding",
+        "label": "Onatrix Padding"
+      },
+      "items": [
+        {
+          "label": "1rem",
+          "data": {
+            "tag": "span",
+            "class": "pb-1rem"
+          },
+          "appearance": { "style": "padding-bottom:1rem;" }
+        },
+        {
+          "label": "2rem",
+          "data": {
+            "tag": "span",
+            "class": "pb-2rem"
+          },
+          "appearance": { "style": "padding-bottom:2rem;" }
+        },
+        {
+          "label": "3rem",
+          "data": {
+            "tag": "span",
+            "class": "pb-3rem"
+          },
+          "appearance": { "style": "padding-bottom:3rem;" }
+        }
+      ]
     }
   ]
 }

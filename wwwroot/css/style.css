@@ -77,6 +77,18 @@ body {
     color: #999999;
 }
 
+.pb-rte-1 {
+    padding-bottom: 1rem;
+}
+
+.pb-rte-2 {
+    padding-bottom: 2rem;
+}
+
+.pb-rte-3 {
+    padding-bottom: 3rem;
+}
+
 /* Hero Section */
 
 
@@ -492,4 +504,34 @@ body {
     color: var(--clr-primary);
 }
 
+/* About Us Intro Section */
 
+.about-us-intro-section {
+    background-color: var(--clr-neutral);
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.about-us-intro-container {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.about-us-intro-body{
+    padding-left: 2rem;
+    display: flex;
+}
+
+.about-us-intro-body p{
+    padding-bottom: 1.5rem;
+}
+
+.about-us-intro-image-container span {
+    font-size: 16px;
+    color: var(--clr-primary);
+    font-style: italic;
+}
