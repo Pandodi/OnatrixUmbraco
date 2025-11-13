@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.TeamMembersSection)Model.Content;
+	var teamMembersList = content.TeamMemberList;
+}
+
+<section class="team-members-section">
+	<div class="team-members-container">
+		<div class="team-rte">@Html.Raw(content.TeamMembersTitle)</div>
+
+		<div class="team-member-list">
+			@if (teamMembersList != null) {
+				for(var i = 0; i < teamMembersList.Count; i++)
+				{
+					var member = teamMembersList[i];
+					var colClass = i < 3 ? "three-a-row" : "four-a-row";
+
+					<div class="@colClass">
+						<partial name="Partials/Blocklist/Components/TeamMemberCard" model="member"/>
+					</div>
+				}
+			}
+		</div>
+	</div>
+</section>
