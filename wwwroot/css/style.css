@@ -535,3 +535,103 @@ body {
     color: var(--clr-primary);
     font-style: italic;
 }
+
+/* About Us Review Section */
+
+.about-us-review-section {
+    background-color: var(--clr-white-100);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.about-us-review-container {
+    display: flex;
+    height: 511px;
+
+}
+
+.about-us-review-body {
+    padding-left: 24rem;
+    padding-top: 3rem;
+    padding-right: 6rem;
+    display: flex;
+}
+
+    .about-us-review-body p {
+        padding-bottom: 1.5rem;
+    }
+
+.aboutus-review-image{
+    height: 100%;
+}
+
+/* Team Member Section */
+.team-members-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--clr-neutral);
+}
+
+.team-members-container {
+    max-width: 60dvw; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding-left: 1rem; 
+    padding-right: 1rem;
+}
+
+.team-member-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    row-gap: 3rem; 
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.three-a-row {
+    width: 33.3%;
+}
+
+.four-a-row{
+    width: 25%;
+}
+
+.team-rte .text-rte-lg{
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.member-card-container img{
+    width: 100%;
+    
+}
+
+.member-card-container {
+    border: 1px solid var(--clr-border-gray);
+    width: 94%;
+}
+
+.member-card-content h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--clr-primary);
+    margin: 0;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.member-card-content p {
+    font-size: 13px;
+    color: var(--clr-notel);
+    margin: 0;
+    padding-left: 1.5rem;
+    margin-top: 0;
+    padding-bottom: 1rem;
+}
+
