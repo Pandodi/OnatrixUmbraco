@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.InfoCard)Model.Content;
+
+}
+
+<div class="info-card-container">
+	<h4>@content.InfoTitle</h4>
+	@if (content.InfoImage != null)
+	{
+		<img src="@content.InfoImage.Url()" />
+	}
+	<div class="info-rte">@Html.Raw(content.InfoText)</div>
+</div>
