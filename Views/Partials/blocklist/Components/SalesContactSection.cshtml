@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.SalesContactSection)Model.Content;
+	var settings = Model.Settings as ContentModels.SalesContactSettings;
+	var salesContactOptions = content.SalesContactOptions;
+
+	var backgroundColour = settings?.SalesBackgroundColor?.Color ?? "#FFFFFF";
+}
+
+<section style="background-color:@backgroundColour;" class="sales-contact-section">
+	<div class="sales-contact-container">
+		<div class="sales-contact-image">
+			@if (content.SalesImage != null)
+			{
+				<img src="@content.SalesImage.Url()" alt="@content.SalesTitle" />
+			}
+		</div>
+
+		<div class="sales-contact-content">
+			<div>@Html.Raw(@content.SalesTitle)</div>
+			<div class="sales-contact-options-list">
+				@Html.GetBlockListHtml(content.SalesContactOptions)
+			</div>
+		</div>
+	</div>
+
+</section>

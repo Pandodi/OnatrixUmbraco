@@ -243,7 +243,6 @@ body {
 /* Our Services Section */
 .services-section{
     padding-top: 2.5rem;
-    background-color: var(--clr-white-100);
     display: flex;
     justify-content: center;
     padding-bottom: 7rem;
@@ -635,3 +634,64 @@ body {
     padding-bottom: 1rem;
 }
 
+/* Sales Contact Section */
+.sales-contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.sales-contact-container {
+    max-width: 60dvw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+}
+
+.sales-contact-image img{
+    width: 100%;
+}
+
+.sales-contact-content{
+    padding-top: 8rem;
+    padding-left: 4rem;
+}
+
+.sales-contact-content .text-rte-lg {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sales-contact-options-list{
+    padding-top: 2rem;
+}
+
+.sales-contact-option-container {
+    margin-bottom: 2rem;
+}
+
+.sales-contact-option-container p{
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+.contact-option-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-option-title i {
+    color: var(--clr-secondary);
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.contact-option-title h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--clr-primary);
+    margin-bottom: 0;
+    margin-top: 0;
+}

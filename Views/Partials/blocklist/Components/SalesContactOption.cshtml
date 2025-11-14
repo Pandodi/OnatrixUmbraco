@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.SalesContactOption)Model.Content;
+	
+}
+
+<div class="sales-contact-option-container">
+	<div class="contact-option-title">
+		<i class="@content.ContactIcon"></i>
+		<h6>@content.ContactOption</h6>
+	</div>
+	<p>@content.ContactInfo</p>
+</div>
