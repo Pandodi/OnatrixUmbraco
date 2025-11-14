@@ -3,9 +3,14 @@
 @{
 	var content = (ContentModels.ServiceSection)Model.Content;
 	var settings = Model.Settings as ContentModels.ServiceSettings;
-	var serviceCardList = content.ServiceCardList;
 
 	var backgroundColour = settings?.ServiceBackgroundColor?.Color ?? "#FFFFFF";
+
+	var current = Umbraco.AssignedContentItem;
+	var siteRoot = current?.Root();
+
+	var servicePage = siteRoot?.Children<ServicesPage>()?.FirstOrDefault();
+	var items = servicePage?.Children<ServiceDetail>()?.OrderBy(x => x.CreateDate).ToList() ?? [];
 }
 
 
@@ -21,7 +26,58 @@
 		</div>
 
 		<div class="service-card-list">
-			@Html.GetBlockListHtml(content.ServiceCardList)
+			@if (items.Any())
+			{
+				foreach(var item in items)
+				{
+					<div class="service-card-container">
+						<a href="@item.Url()" class="service-card-content">
+							<h5>@item.Name</h5>
+
+							@if (item.ServiceDetailThumbnail != null)
+							{
+								<img src="@item.ServiceDetailThumbnail.Url()"/>
+							}
+
+							<p>@item.ServiceDetailDescription</p>
+						</a>
+					</div>
+				}
+			} 
+			else 
+			{
+				<p>No Services Available</p>
+			}
+			
 		</div>
 	</div>
 </section>
+
+@*
+<section class="services-section" style="background-color: @backgroundColour;">
+	<div class="services-container">
+		<div class="services-content">
+			@if (settings?.ShowServiceLabel == true)
+			{
+				<h2>@content.ServiceLabel</h2>
+			}
+			<div class="services-rte">@Html.Raw(content.ServiceTitle)</div>
+		</div>
+
+		<div class="service-card-list">
+			<div class="service-card-container">
+				<a class="service-card-content">
+					<h5>@content.ServiceCardTitle</h5>
+
+					@if (content.ServiceCardImage != null)
+					{
+						<img src="@content.ServiceCardImage.Url()" alt="@content.ServiceCardTitle" />
+					}
+
+					<p>@Html.Raw(content.ServiceCardDescription)</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+*@
