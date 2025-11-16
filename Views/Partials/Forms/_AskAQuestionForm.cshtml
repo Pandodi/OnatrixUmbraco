@@ -1,0 +1,26 @@
+﻿@using OnatrixUmbraco.ViewModels﻿
+@model ContactFormViewModel
+@using (Html.BeginUmbracoForm("HandleQuestionForm", "Contact", FormMethod.Post, new { novalidate = "novalidate", id = "questionForm" }))
+
+{
+	<div class="callback-form-content">
+		<div>
+			<input asp-for="Name" type="text" placeholder="@Html.DisplayNameFor(x => x.Name)" class="form-input" />
+			<span asp-validation-for="Name"></span>
+		</div>
+
+		<div>
+			<input asp-for="Email" type="text" placeholder="@Html.DisplayNameFor(x => x.Email)" class="form-input" />
+			<span asp-validation-for="Email"></span>
+		</div>
+
+		<div>
+			<input asp-for="Question" type="text" placeholder="@Html.DisplayNameFor(x => x.Question)" class="form-input" />
+			<span asp-validation-for="Question"></span>
+		</div>
+
+		<div>
+			<button class="form-button" type="submit">Submit</button>
+		</div>
+	</div>
+}

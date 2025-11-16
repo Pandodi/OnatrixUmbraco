@@ -4,27 +4,27 @@
 @{
 	var content = (ContentModels.CallbackSection)Model.Content;
 	var settings = Model.Settings as ContentModels.CallbackSettings;
+	var variant = settings?.StyleVariant ?? "Default";
 
 	var formViewModel = new CallbackFormViewModel
 			{
-				Options = settings?.CallbackRequestOptions ?? []
+				Options = settings?.CallbackRequestOptions ?? [],
+				Variant = variant
 			};
 
 }
-<section class="callback-section">
-	<div class="callback-container">
-		<div class="callback-content">
+<section class="callback-section--@variant">
+	<div class="callback-container--@variant">
+		<div class="callback-content--@variant">
 			@Html.Raw(content.CallbackSectionBody)
 		</div>
 
-		<div class="callback-form-container">
-			<div class="callback-form-title">
+		<div class="callback-form-container--@variant">
+			<div class="callback-form-title--@variant">
 				<p>@content.CallbackSectionFormTitle</p>
 			</div>
-			<p class="callback-form-description">@content.CallbackSectionFormDescription</p>
-
-			<partial name="Partials/Forms/_CallbackForm" model="formViewModel" />
-
+			<p class="callback-form-description--@variant">@content.CallbackSectionFormDescription</p>
+			<partial name="Partials/Forms/_CallbackForm" model="formViewModel"/>
 			@if (TempData["FormSuccess"] != null)
 			{
 				<div>
