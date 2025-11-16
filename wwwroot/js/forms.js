@@ -1,5 +1,6 @@
 ﻿document.addEventListener("submit", function (e) {
-    if (e.target.matches("form")) {
+    const form = e.target.closest("form");
+    if (form) {
         sessionStorage.setItem("scrollY", window.scrollY);
     }
 });

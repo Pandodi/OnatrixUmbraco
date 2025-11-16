@@ -11,7 +11,7 @@
     --clr-white-100: #F7F7F7;
     --clr-dark: #0E0E0E;
     --clr-primary: #4F5955;
-    --clr-main-light: #686966;
+    --clr-main-light: #606966;
     --clr-accent: #F2EDDC;
     --clr-secondary: #D9C3A9;
     --clr-gray-400: #4B5264;
@@ -105,7 +105,95 @@ body {
     color:var(--clr-secondary)
 }
 
+.current {
+    color: var(--clr-accent);
+}
 
+/* Header Section */
+.top-bar-container{
+    display: flex;
+    background-color: var(--clr-primary);
+    justify-content: center;
+}
+
+.top-bar-content{
+    width: 60dvw;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.top-bar-content p{
+    font-size: 13px;
+    color: var(--clr-neutral);
+}
+
+.top-bar-sm-links {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.top-bar-sm-links a {
+    border-left: 1px solid var(--clr-main-light);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-sm-links a:last-child {
+    border-right: 1px solid var(--clr-main-light);
+}
+
+.top-bar-sm-links a i {
+    color: var(--clr-neutral);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 100%;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+header {
+    display: flex;
+    background-color: var(--clr-neutral);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header nav {
+    width: 60dvw;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--clr-primary);
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding-left: 0;
+}
+
+.current a{
+    color: var(--clr-secondary) !important;
+}
+
+.search-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Hero Section */
 .hero-section {
@@ -165,12 +253,12 @@ body {
 
 /* Callback Section */
 
-.callback-section {
+.callback-section--Default {
     padding-top: 12rem; 
     padding-bottom: 7rem;
 }
 
-.callback-container {
+.callback-container--Default {
     max-width: 60vw;
     margin-left: auto;
     margin-right: auto;
@@ -180,19 +268,19 @@ body {
     gap: 2.5rem;
 }
 
-.callback-container p {
+.callback-container--Default p {
     margin: 0rem;
     line-height: 1.125;
 }
 
-.callback-content {
+.callback-content--Default {
     width: 58%;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
-.callback-form-container {
+.callback-form-container--Default {
     background-color: var(--clr-neutral);
     width: 470px;
     height: 572px;
@@ -205,25 +293,25 @@ body {
     top: 625px;
 }
 
-.callback-form-title{
+.callback-form-title--Default {
     background-color: var(--clr-primary);
 }
 
-    .callback-form-title p {
+    .callback-form-title--Default p {
         color: var(--clr-white);
         padding: 2rem;
         font-size: 1.875rem;
         font-weight: bold;
     }
 
-.callback-form-description {
+.callback-form-description--Default {
     padding: 2rem;
     font-style: italic;
     color: var(--clr-body-text);
     font-size: 13px;
 }
 
-.callback-form-content {
+.callback-form-content--Default {
     padding-right: 2rem;
     padding-left: 2rem;
     display: flex;
@@ -234,18 +322,14 @@ body {
 .form-input {
     padding: 1rem;
     font-style: italic;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--clr-form-border);
+    border: 1px solid var(--clr-form-border);
     width: 100%
 }
 
-.form-button {
+.form-button--Default {
     font-weight: bold;
     font-size: 16px;
-    border-width: 0.5px;
-    border-style: solid;
-    border-color: var(--clr-form-border);
+    border: 0.5px solid var(--clr-form-border);
     border-radius: 4px;
     user-select: none;
     padding-top: 1rem;
@@ -256,8 +340,88 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Callback Form - Contact Page */
+
+.callback-section--contactPage {
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+    background-image: url('/images/map 1.svg');
+    background-repeat: no-repeat;
+}
+
+.callback-container--contactPage {
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-start: 8rem;
+    padding: 4rem 4rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: var(--clr-neutral);
+    box-shadow: 0px 12px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.callback-content--contactPage p{
+    margin: 0;
+}
+
+.callback-content--contactPage p:last-child {
+    margin-top: 1.5rem;
+}
+
+.callback-content--contactPage .text-rte-lg{
+    line-height: 1.125;
+    padding-top: 1rem;
+}
+
+.callback-form-title--contactPage p {
+    display: none;
+}
+
+.callback-form-content--contactPage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+    gap: 1rem;
+}
+
+.field-validation-valid{
+    display: none;
+}
+
+.form-button--contactPage {
+    font-weight: bold;
+    font-size: 16px;
+    border: 0.5px solid var(--clr-form-border);
+    border-radius: 4px;
+    user-select: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--clr-primary);
+    color: var(--clr-accent);
+    margin-bottom: 2rem;
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.callback-form-content--contactPage > div:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.callback-form-description--contactPage {
+    display: none;
+}
+
+.callback-content--contactPage > p:last-child {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Our Services Section */
-.services-section{
+.services-section {
     padding-top: 2.5rem;
     display: flex;
     justify-content: center;
@@ -268,7 +432,6 @@ body {
     margin: 0 auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    display: flex;
     flex-direction: column;
     align-self: center;
 }
@@ -300,11 +463,20 @@ body {
 .service-card-container{
     background-color: var(--clr-neutral);
     border-radius: 4px;
+    border: 1px solid var(--clr-border-gray);
 }
 
-.service-card-content{
-    display: flex;
-    flex-direction: column;
+.service-card-container img {
+    width: 100%;
+}
+
+.serviceSwiper {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+}
+
+.service-card-content {
+    display: block;
     text-decoration: none;
 }
 
@@ -472,7 +644,7 @@ body {
 /* Page Header */
 
 .page-header-section {
-    background-image: url('/images/Page_Header-bg.svg');
+    background-image: url('/images/Page-Header-bg.svg');
     background-size: cover;
     background-position: center;
     height: 245px;
@@ -770,3 +942,70 @@ body {
     font-size: 14px;
 }
 
+/* Swiper Settings */
+
+.custom-pagination{
+    display: none;
+}
+
+.custom-prev, .custom-next {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: var(--clr-gray-400) !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.swiper-button-disabled {
+    color: var(--clr-border-400) !important;
+    cursor: default !important;
+}
+
+.swiper-pagination {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    position: relative !important;
+    width: auto !important;
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 1.5rem !important;
+    background-color: var(--clr-neutral) !important;
+    border-radius: 9999px !important;
+    cursor: pointer !important;
+}
+
+    .swiper-pagination-bullet:hover {
+        outline-style: solid !important;
+        outline-width: 1px !important;
+        outline-color: #9ca3af !important;
+        opacity: 1 !important;
+    }
+
+.swiper-pagination-bullet-active {
+    outline-style: solid !important;
+    outline-width: 1px !important;
+    outline-color: #9ca3af !important;
+    color: var(--clr-primary) !important;
+}
+
+@media (min-width: 768px) {
+
+    .custom-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 1.5rem;
+    }
+}

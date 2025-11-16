@@ -1,0 +1,31 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using OnatrixUmbraco.ViewModels
+@{
+	var content = (ContentModels.AskQuestionSection)Model.Content;
+	var formViewModel = new ContactFormViewModel();
+
+}
+<section class="callback-section">
+	<div class="callback-container">
+
+		<h2>@content.FormTitle</h2>
+
+		<div class="callback-form-container">
+
+			<partial name="Partials/Forms/_AskAQuestionForm" model="formViewModel" />
+			@if (TempData["FormSuccess"] != null)
+			{
+				<div>
+					@TempData["FormSuccess"]
+				</div>
+			}
+			else if (TempData["FormError"] != null)
+			{
+				<div>
+					@TempData["FormError"]
+				</div>
+			}
+		</div>
+	</div>
+</section>

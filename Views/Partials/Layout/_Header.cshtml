@@ -48,13 +48,13 @@
 				@foreach (var item in selection)
 				{
 					<li class="@(item.IsAncestorOrSelf(Model) ? "current" : null)">
-						<a href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+						<a class="nav-link" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
 					</li>
 				}
 			</ul>
 		}
 
-		<div>
+		<div class="search-icon">
 			<i class="bi bi-search"></i>
 		</div>
 	</nav>

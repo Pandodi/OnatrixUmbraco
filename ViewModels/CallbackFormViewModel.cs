@@ -23,4 +23,6 @@ public class CallbackFormViewModel
 
     [BindNever]
     public IEnumerable<string> Options { get; set; } = [];
+
+    public string Variant { get; set; } = "Default";
 }

@@ -1,11 +1,11 @@
-﻿﻿@using OnatrixUmbraco.ViewModels
+﻿@using OnatrixUmbraco.ViewModels﻿
 @model CallbackFormViewModel
 @using (Html.BeginUmbracoForm("HandleCallbackForm", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "callbackForm" }))
 
 {
-	<div class="callback-form-content">
+	<div class="callback-form-content--@Model.Variant">
 		<div>
-			<input asp-for="Name" type="text" placeholder="@Html.DisplayNameFor(x => x.Name)" class="form-input"/>
+			<input asp-for="Name" type="text" placeholder="@Html.DisplayNameFor(x => x.Name)" class="form-input" />
 			<span asp-validation-for="Name"></span>
 		</div>
 
@@ -40,7 +40,7 @@
 		<span asp-validation-for="SelectedOption"></span>
 
 		<div>
-			<button class="form-button" type="submit">Submit</button>
+			<button class="form-button--@Model.Variant" type="submit">Submit</button>
 		</div>
 	</div>
 }

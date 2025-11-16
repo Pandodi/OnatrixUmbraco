@@ -25,31 +25,41 @@
 			<div class="services-rte">@Html.Raw(content.ServiceTitle)</div>
 		</div>
 
-		<div class="service-card-list">
+		@*<div class="service-card-list">*@
 			@if (items.Any())
 			{
-				foreach(var item in items)
-				{
-					<div class="service-card-container">
-						<a href="@item.Url()" class="service-card-content">
-							<h5>@item.Name</h5>
+				<div class="swiper serviceSwiper">
+					<div class="swiper-wrapper">
+						@foreach (var item in items)
+						{
+							<div class="swiper-slide service-card-container">
+								<a href="@item.Url()" class="service-card-content">
+									<h5>@item.Name</h5>
 
-							@if (item.ServiceDetailThumbnail != null)
-							{
-								<img src="@item.ServiceDetailThumbnail.Url()"/>
-							}
+									@if (item.ServiceDetailThumbnail != null)
+									{
+										<img src="@item.ServiceDetailThumbnail.Url()" />
+									}
 
-							<p>@item.ServiceDetailDescription</p>
-						</a>
+									<p>@item.ServiceDetailDescription</p>
+								</a>
+							</div>
+						}
 					</div>
-				}
+
+					<div class="custom-pagination">
+						<div class="custom-prev">Prev</div>
+						<div class="swiper-pagination"></div>
+						<div class="custom-next">Next</div>
+					</div>
+
+				</div>
 			} 
 			else 
 			{
 				<p>No Services Available</p>
 			}
-			
-		</div>
+		@*</div>*@
 	</div>
 </section>
 

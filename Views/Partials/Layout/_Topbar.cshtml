@@ -6,11 +6,11 @@
 	var contactAddress = siteSettings?.ContactAddress ?? "No address added";
 }
 
-<div>
-	<div>
+<div class="top-bar-container">
+	<div class="top-bar-content">
 		<p>@contactAddress</p>
 
-		<div>
+		<div class="top-bar-sm-links">
 			@if (siteSettings?.PlatformList != null)
 			{
 				foreach (var item in siteSettings.PlatformList)
